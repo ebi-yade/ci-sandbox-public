@@ -1,0 +1,17 @@
+name: time zone
+
+on:
+  pull_request:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: show date in tokyo
+        run: |
+          TZ=-9 date +"%Y-%m-%d %H:%M"
