@@ -14,4 +14,4 @@ jobs:
     steps:
       - name: show date in tokyo
         run: |
-          date --help
+          TZ=Asia/Tokyo date +"%Y-%m-%d %H:%M"
