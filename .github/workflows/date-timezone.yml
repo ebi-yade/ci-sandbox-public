@@ -14,4 +14,6 @@ jobs:
     steps:
       - name: show date in tokyo
         run: |
-          TZ=-9 date +"%Y-%m-%d %H:%M"
+          date +"%Y-%m-%d %H:%M"
+        env:
+          TZ: "-9"
