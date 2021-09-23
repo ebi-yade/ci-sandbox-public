@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Assign author to issue
         uses: technote-space/assign-author@v1
-        if: ${{ !contains(github.event.issue.labels.*.name, 'aaa') || toJSON(github.event.issue.assignees) == '[]' }}
+        if: ${{ !contains(github.event.issue.labels.*.name, 'aaa') && toJSON(github.event.issue.assignees) == '[]' }}
